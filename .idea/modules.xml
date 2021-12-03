@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/springcloud-parent/eureka-server/eureka-server.iml" filepath="$PROJECT_DIR$/springcloud-parent/eureka-server/eureka-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud-parent/gateway-service/gateway-service.iml" filepath="$PROJECT_DIR$/springcloud-parent/gateway-service/gateway-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/itheima-rest-consumer/itheima-rest-consumer.iml" filepath="$PROJECT_DIR$/itheima-rest-consumer/itheima-rest-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/itheima-rest-provider/itheima-rest-provider.iml" filepath="$PROJECT_DIR$/itheima-rest-provider/itheima-rest-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud-parent/springcloud-parent.iml" filepath="$PROJECT_DIR$/springcloud-parent/springcloud-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/springcloud02.iml" filepath="$PROJECT_DIR$/.idea/springcloud02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud-parent/user-consumer/user-consumer.iml" filepath="$PROJECT_DIR$/springcloud-parent/user-consumer/user-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud-parent/user-provider/user-provider.iml" filepath="$PROJECT_DIR$/springcloud-parent/user-provider/user-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud-parent/user-provider2/user-provider2.iml" filepath="$PROJECT_DIR$/springcloud-parent/user-provider2/user-provider2.iml" />
+    </modules>
+  </component>
+</project>

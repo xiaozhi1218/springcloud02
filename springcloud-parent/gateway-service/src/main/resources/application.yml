@@ -1,0 +1,27 @@
+# 注释版本
+server:
+  port: 18084
+spring:
+  application:
+    name: api-gateway # 应用名
+  cloud:
+    gateway:
+      routes: # 定义路由规则  以 /user/** 的请求路径 就将该请求转发给user-provider微服务中处理
+        - id: path_route # 定义一个标识
+         # uri: http://localhost:18081  # 将要转发的服务地址
+          uri: lb://user-provider  # 负载均衡的方式进行配置 指定spring.application.name的值
+          predicates: # 转发的条件 就是断言
+            - Path=/**  # 路径条件 表示以/user/开头的路径 才转发给user-provider 例如：http://localhost:18084/user/1--->转发给http://localhost:18081/user/1
+            #- Path=/user/**  # 路径条件 表示以/user/开头的路径 才转发给user-provider 例如：http://localhost:18084/user/1--->转发给http://localhost:18081/user/1
+          filters: # 局部过滤器--》框架自带的PrefixPath 过滤器
+           # - PrefixPath=/user
+            - StripPrefix=1  # 去除前缀  例如：http://localhost:18084/api/user/1 --> 变成：http://localhost:18081/user/1
+            - MyParam=zhangsan,lisi
+      default-filters: # 全局的
+        - AddResponseHeader=myusername,zhangsan
+# Eureka服务中心配置
+eureka:
+  client:
+    service-url:
+      # 注册Eureka Server集群
+      defaultZone: http://127.0.0.1:7001/eureka
